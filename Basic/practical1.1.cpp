@@ -1,26 +1,19 @@
-// A bank wants to create a simple system to manage customer bank accounts. The system should
-// allow customers to perform basic banking operations such as depositing money, withdrawing
-// money, and checking their account balance.
-// Each bank account will need to have an account holder's name, a unique account number, and
-// a balance. Deposits should increase the account balance, while withdrawals should only be
-// allowed if there are sufficient funds in the account. If an attempt is made to withdraw more
-// money than is available, an error message should be displayed. Customers should also have the
-// ability to view their account balance whenever required.
-// The system must be designed using Object-Oriented Programming principles, focusing on
-// creating a simple and efficient solution to manage the accounts effectively. The system should
-// ensure that all account details are secure and accessible only through authorized methods.
+
 
 #include<iostream>
 using namespace std;
 
 class Bank_Account{
   char name[25];
-  int account_number=100,balance;
+  int account_number,balance;
+  static int account_counter;
   public:
+  Bank_Account(){
+    account_number= ++account_counter;
+  }
   void account_detail(){
     cout<<"Enter name:";
     cin>>name;
-    account_number++;
     cout<<"Enter a balance";
     cin>>balance;
 
@@ -29,7 +22,7 @@ class Bank_Account{
       int x;
   cout<<"Enter a account number";
   cin>>x;
-    if(x=account_number){
+    if(x==account_number){
             int y;
         cout<<"enter a add balance";
         cin>>y;
@@ -44,7 +37,7 @@ class Bank_Account{
        int z;
   cout<<"Enter a account number";
   cin>>z;
-      if(z=account_number){
+      if(z==account_number){
         if(balance!=0){
             int a;
             cout<<"Enter amount";
@@ -58,16 +51,17 @@ void display_data(){
 }
 
 };
+int Bank_Account ::account_counter=100;
 
 int main(){
- Bank_Account  b[10];
- for(int i=0;i<10;i++){
+ Bank_Account  b[2];
+ for(int i=0;i<2;i++){
     b[i].account_detail();
  }
- for(int i=0;i<10;i++){
+ for(int i=0;i<2;i++){
    b[i].add_money();
  }
- for(int i=0;i<10;i++){
+ for(int i=0;i<2;i++){
    b[i].withdraving_money();
    b[i].display_data();
  }
