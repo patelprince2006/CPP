@@ -16,7 +16,7 @@ void AddData()
 }
 
 void UpdateData()
-{   cout<<"enter lendth and width :";
+{
     cin>>Length>>Width;
     Area=Length*Width;
     Parimeter=2*(Length*Width);
@@ -45,8 +45,7 @@ c++;
 break;
 }
 case 2:
-{  cout<<"enter ploat number: "; 
-    cin>>PlotNumber;
+{cin>>PlotNumber;
 if(PlotNumber<=c)
 {
 P[PlotNumber-1].UpdateData();
