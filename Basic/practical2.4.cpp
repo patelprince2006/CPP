@@ -1,3 +1,4 @@
+
 #include<iostream>
 using namespace std;
 
@@ -52,11 +53,14 @@ void Display_item_details(){
     cout<<"enter your account number: ";
     cin>>p;
     if(p==id){
-      cout<<"your id is: "<<id;
-      cout<<"your name is: "<<name;
-      cout<<"your quantity is: "<<quantity;
-      cout<<"your price is:"<<price;
+      cout<<"your id is: "<<id<<endl;
+      cout<<"your name is: "<<name<<endl;
+      cout<<"your quantity is: "<<quantity<<endl;
+      cout<<"your price is:"<<price<<endl;
     }
+    }
+    int get_id(){
+        return id;
     }
 };
 
@@ -70,31 +74,45 @@ next:cout<<"1 -> Add_item_detail"<<endl<<"2 -> Increase_quantity"<<endl<<"3 -> D
     {
     
     case 1:
-        for(c=0;c<10;c++){
+       if(c<10){
          s[c].Add_item_detail();
-         break;
+         c++;
+         
         }
         break;
 
     case 2:
-        for(c=0;c<10;c++){
-         s[c].Increase_quantity();
+     int id_num;
+     cout<<"enter id number: ";
+     cin>>id_num;
+        for(int i=0;i<10;i++){
+            if(s[i].get_id()==id_num){
+         s[i].Increase_quantity();
          break;
+        }
         }
         break;
 
     case 3:
-        for(c=0;c<10;c++){
-         s[c].Decrease_quantity();
-         break;
-        }
+    cout<<"enter id number: ";
+    cin>>id_num;
+       for(int i=0;i<10;i++){
+           if(s[i].get_id()==id_num){
+        s[i].Decrease_quantity();
+        break;
+       }
+     }
         break;
     
     case 4:
-        for(c=0;c<10;c++){
-         s[c].Display_item_details();
-         break;
-        }
+    cout<<"enter id number: ";
+    cin>>id_num;
+       for(int i=0;i<10;i++){
+           if(s[i].get_id()==id_num){
+        s[i].Display_item_details();
+        break;
+       }
+       }
         break;
 
     default:{
