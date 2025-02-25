@@ -3,7 +3,8 @@ using namespace std;
 
 class Bank_Account{
   char acc_holder_name[25];
-  long int Acc_number,Balance;
+  int Acc_number;
+  int Balance;
 
   public:
   void Add_Account(){
@@ -47,7 +48,11 @@ class Bank_Account{
     cout<<"your account balance: "<<Balance<<endl;
   }
 }
+int get_acc_num(){
+  return Acc_number;
+}
 };
+
 
 int main(){
     Bank_Account b[10];
@@ -58,30 +63,56 @@ int main(){
     switch (choice)
     {
     case 1:
-      for(int c=0;c<10;c++){
+            if(c<10){
             b[c].Add_Account();
+            c++;
         break;
       }
       break;
     case 2:
-      for(int c=0;c<10;c++){
-            b[c].Deposit_Money();
-            break;
-        }
-        break;
-    case 3:
-      for(int c=0;c<10;c++){
-            b[c].Withdraw_Money();
-            break;
-        }
-        break;
-    case 4:
-      for(int c=0;c<10;c++){
-            b[c].display_Acc_Detail();
-            break;
-        }
-        break;        
+    {
+    int accNum;
+    cout << "Enter Account Number: ";
+    cin >> accNum;
+
     
+    for (int i = 0; i < c; i++) {
+        if (b[i].get_acc_num() == accNum) {
+         
+            b[i].Deposit_Money();
+            break;
+        }
+      }
+        break;
+    }
+    case 3:
+    { int accNum;
+    cout << "Enter Account Number: ";
+    cin >> accNum;
+
+    
+    for (int i = 0; i < c; i++) {
+        if (b[i].get_acc_num() == accNum) {
+            b[i].Withdraw_Money();
+            break;
+        }
+      }
+        break;
+    }
+    case 4:
+    { int accNum;
+    cout << "Enter Account Number: ";
+    cin >> accNum;
+
+    
+    for (int i = 0; i < c; i++) {
+        if (b[i].get_acc_num() == accNum) {
+            b[i].display_Acc_Detail();
+            break;
+        }
+      }
+        break;        
+    }
     default:
        goto e;
         break;
