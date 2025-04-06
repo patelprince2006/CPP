@@ -50,7 +50,7 @@ class Store_Management{
     
 void Display_item_details(){
     int p;
-    cout<<"enter your account number: ";
+    cout<<"enter your id number: ";
     cin>>p;
     if(p==id){
       cout<<"your id is: "<<id<<endl;
