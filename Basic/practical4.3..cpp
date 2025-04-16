@@ -32,7 +32,6 @@ public:
     void display_CarInfo() {
         display_Brand();
         display_FuelType();
-        cout << "-------------------------" << endl;
     }
 };
 

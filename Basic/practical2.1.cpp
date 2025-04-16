@@ -34,7 +34,7 @@ int main()
 PlotData P[25];int PlotNumber;int p;
 
 int Choice,c=0,Next;
-Next: cout<< "Enter 1 For AddData , 2 For UpdateData, 3 For DisplayData\n";
+Next: cout<< "Enter 1 For AddData\n , 2 For UpdateData\n, 3 For DisplayData\n";
 cout<<"enter the choice:\n";
 cin>>Choice;
 switch(Choice)
@@ -51,7 +51,7 @@ if(PlotNumber<=c)
 P[PlotNumber-1].UpdateData();
 }
 else
-cout<<"the total plot is:"<<c;
+cout<<"the total plot is:"<<c<<endl;
 }
 case 3:
  {for (int i = 0; i < c; i++)

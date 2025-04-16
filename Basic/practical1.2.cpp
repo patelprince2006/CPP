@@ -51,13 +51,12 @@ int InventoryManagement::p_id = 10;
 int InventoryManagement::total_amount = 0;
 
 int main() {
-    const int productCount = 3;
-    InventoryManagement products[productCount];
+    InventoryManagement products[3];
 
-    for (int i = 0; i < productCount; i++) {
+    for (int i = 0; i < 3; i++) {
         products[i].Add_New_Product();    }
 
-    for (int i = 0; i < productCount; i++) {
+    for (int i = 0; i < 3; i++) {
         products[i].add_quantity();
         products[i].sum_price();
     }
