@@ -18,7 +18,7 @@ protected:
     string brand_Name;
 public:
     Brand(string b) {
-        brandName = b;
+        brand_Name = b;
     }
     void display_Brand() {
         cout << "Brand: " << brand_Name << endl;
