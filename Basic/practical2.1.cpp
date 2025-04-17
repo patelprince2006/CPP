@@ -9,14 +9,14 @@ int Length,Width,Area,Parimeter;
 public:
 void AddData()
 {
-    cout<<"enter Length and Width";
+    cout<<"enter Length and Width:";
     cin>>Length>>Width;
     Area=Length*Width;
     Parimeter=2*(Length+Width);
 }
 
 void UpdateData()
-{
+{   cout<<"eenter a update length and width:";
     cin>>Length>>Width;
     Area=Length*Width;
     Parimeter=2*(Length*Width);
@@ -24,7 +24,7 @@ void UpdateData()
 
 int DisplayData()
 {
-    cout<<"the area is:"<<Area;
+    cout<<"\nthe area is:"<<Area;
     cout<<"\nthe parimeter is:"<<Parimeter;
 }
 };
@@ -34,8 +34,8 @@ int main()
 PlotData P[25];int PlotNumber;int p;
 
 int Choice,c=0,Next;
-Next: cout<< "Enter 1 For AddData\n , 2 For UpdateData\n, 3 For DisplayData\n";
-cout<<"enter the choice:\n";
+Next: cout<< "\nEnter 1 For AddData\n  2 For UpdateData\n 3 For DisplayData\n";
+cout<<"\nenter the choice:";
 cin>>Choice;
 switch(Choice)
 {
@@ -45,17 +45,19 @@ c++;
 break;
 }
 case 2:
-{cin>>PlotNumber;
+{   cout<<"enter a plot number:";
+    cin>>PlotNumber;
 if(PlotNumber<=c)
 {
 P[PlotNumber-1].UpdateData();
 }
 else
 cout<<"the total plot is:"<<c<<endl;
+break;
 }
 case 3:
  {for (int i = 0; i < c; i++)
-  {
+  { 
     P[i].DisplayData();
   }
   break;

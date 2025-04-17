@@ -50,7 +50,7 @@ int main()
 {
     acc_management a[20];
     int c=0,choice;
-   n: cout<<"1 -> add account detail"<<endl<<"2 -> money transfer"<<endl<<"3 -> account detail"<<endl;
+   n: cout<<"\n1 -> add account detail"<<endl<<"2 -> money transfer"<<endl<<"3 -> account detail"<<endl;
     cout<<"enter your choice : ";
     cin>>choice;
     switch (choice)
@@ -71,7 +71,7 @@ int main()
       int x;
             cout<<"enter a account number: ";
             cin>>x;
-        for( i=x-1;i<c;i++)
+        for( i=x-1;i<=c;i++)
         {  
           if(a[i].get_acc_num()==x){
             
@@ -84,7 +84,7 @@ int main()
         int r;
         cout<<"enter a account number for withdraw : ";
         cin>>r;
-          for(int i=r-1;i<c;i++){
+          for(int i=r-1;i<=c;i++){
           
           if(a[i].get_acc_num()==r){
             a[i].withdrawal_money(y);

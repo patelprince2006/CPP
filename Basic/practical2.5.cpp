@@ -11,6 +11,7 @@ class Loan_management{
 
   void Cal_Emi(){
      Emi = (total_loan_amount*Interest_rate*pow(1+Interest_rate,time))/(pow(1+Interest_rate,time)-1);
+     Emi=Emi/100;
      cout<<"your emi is "<<Emi;
   }
 
@@ -46,7 +47,7 @@ int get_id(){
 int main(){
    Loan_management l[10];
    int choice,c=0;
-  n:cout<<"1 -> add account "<<endl<<"2 -> display account detail";
+  n:cout<<"\n1 -> add account "<<endl<<"2 -> display account detail\n";
     cout<<"enter your choice:";
     cin>>choice;
     switch (choice)

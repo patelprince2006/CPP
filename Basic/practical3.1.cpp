@@ -44,7 +44,7 @@ class  employe{
 int main(){
     employe e[20];
     int choice,c=0;
-    n:cout<<"1-> add emplyoe detail"<<endl<<"2 -> display employe detail"<<endl;
+    n:cout<<"\n1-> add emplyoe detail"<<endl<<"2 -> display employe detail"<<endl;
     cout<<"enter  a choice:";
     cin>>choice;
     switch(choice){

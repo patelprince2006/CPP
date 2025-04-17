@@ -56,9 +56,9 @@ int get_acc_num(){
 
 int main(){
     Bank_Account b[10];
-    cout<<"1 -> add account "<<endl<<"2 - > deposite money"<<endl<<"3 -> withrawaal money"<<endl<<"4 -> display detail";
+    cout<<"1 -> add account "<<endl<<"2 - > deposite money"<<endl<<"3 -> withrawaal money"<<endl<<"4 -> display detail\n";
     int choice,c=0;
-    n:cout<<"enter your choice:";
+    n:cout<<"\n\nenter your choice:";
     cin>>choice;
     switch (choice)
     {

@@ -68,7 +68,7 @@ int main(){
     Store_Management s[10];
     int c=0,choice;
 next:cout<<"1 -> Add_item_detail"<<endl<<"2 -> Increase_quantity"<<endl<<"3 -> Decrease_quantity"<<endl<<"4 -> Display_item_details"<<endl;
-    cout<<"enter your choice: ";
+    cout<<"\nenter your choice: ";
     cin>>choice;
     switch (choice)
     {
