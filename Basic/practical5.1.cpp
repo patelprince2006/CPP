@@ -1,65 +1,73 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
 
-class calculator{
-  int z;
-  float e;
-  public:
-  int add(int x,int y){
-    z=x+y;
-    return z; 
-  }
-  float add(float p,float q){
-    e=p+q;
-    return e;
-  }
+class Calculator {
+public:
+    int add(int a, int b) {
+        return a + b;
+    }
+
+    float add(float a, float b) {
+        return a + b;
+    }
+
+    float add(int a, float b) {
+        return a + b;
+    }
+
+    float add(float a, int b) {
+        return a + b;
+    }
 };
 
-int main(){
-  calculator c[10];
-  int p[10],i=0;
-  float q[10];
- n: cout<<"1 -> int data"<<endl<<"2 -> floating data"<<"3 -> display data"<<endl;
- int choice;
-  cout<<"enter a choice:";
-  cin>>choice;
-  switch(choice){
-  case 1:
-  {
-   while(i<10){
-    int a,b;
-    cout<<"enter a and b:";
-    cin>>a>>b;
-    // c[i].add(a,b);
-    p[i]=c[i].add(a,b);
-    i++;
-    break;
-   }
-   break;
-  }
-  case 2:{
-    while(i<10){
-     float k,d;
-     cout<<"enter c and d:";
-     cin>>k>>d;
-     q[i]=c[i].add(k,d);
-     i++;
-     break;
-    }
-    break;
-  }
-  case 3:{
-  for(int j=0;j<i;j++){
-    cout<<p[j]<<endl;
-    cout<<q[j]<<endl;
-  }
-  break;
-}
-  default:{
+int main() {
+    Calculator cal;
     
-    goto e;
-  }
-}
-   goto n;
-  e: return 0;
+    string types[20];  
+    float results[20]; 
+    int count = 0;     
+    int choice;
+
+     for(int i=0;i<20;i++){
+        cout << "1. Add int + int\n";
+        cout << "2. Add float + float\n";
+        cout << "3. Display Results\n";
+        cout << "Enter your choice: ";
+        cin >> choice;
+
+        int x, y;
+        float a, b;
+        float result;
+
+        switch (choice) {
+            case 1:
+                cout << "Enter two integers: ";
+                cin >> x >> y;
+                result = cal.add(x, y);
+                types[count] = "int + int";
+                results[count] = result;
+                count++;
+                break;
+
+            case 2:
+                cout << "Enter two floats: ";
+                cin >> a >> b;
+                result = cal.add(a, b);
+                types[count] = "float + float";
+                results[count] = result;
+                count++;
+                break;
+
+            case 3:
+                for (int i = 0; i < count; i++) {
+                    cout << "Type: " << types[i] <<": "<< results[i] << endl;
+                }
+                break;
+
+            default:
+                break;
+        }
+    }
+
+    return 0;
 }
