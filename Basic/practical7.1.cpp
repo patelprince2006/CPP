@@ -8,7 +8,6 @@ int main(){
   string s[50];
   string u[50];
   int count=0;
-  int *k[50];
 
   ifstream file("student.txt");
   if (!file) {
