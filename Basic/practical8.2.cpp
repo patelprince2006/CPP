@@ -24,7 +24,7 @@ int main() {
         }
     }
 
-    for (auto word : m) {
+    for (auto word : m){
         cout << word.first << ": " << word.second << endl;
     }
 
