@@ -10,7 +10,7 @@ struct counter {
     }
 
     void display_data() {
-        cout << "a: " << a << endl << ", b: " << b << endl;
+        cout << "a: " << a << endl << "b: " << b << endl;
     }
 };
 
