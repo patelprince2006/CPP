@@ -1,7 +1,8 @@
 #include <iostream>
 using namespace std;
 
-struct counter {
+class counter {
+    public:
     int a, b;
 
     void insert_data() {
