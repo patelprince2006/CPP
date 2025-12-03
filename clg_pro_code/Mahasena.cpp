@@ -18,15 +18,15 @@ int main()
     if(Soldiers>0){
     cout << endl;
 
-    int Weapons;//Variable for no. of weapons that soldiers have
+    int Weapons;
 
     int Lucky = 0, Unlucky = 0;//Variables for no. of lucky & unlucky soldiers
 
-    for (int i = 0; i < Soldiers ; ++i)//Loop for entering no. of weapons for soldiers & for counting no. of lucky & unlucky soldiers
+    for (int i = 0; i < Soldiers ; ++i)
     {
         cout << "Enter no. of weapons for soldier " << i+1 << ": ";
         cin >> Weapons;
-        if (Weapons % 2 == 0)//If no. of weapons is even...
+        if (Weapons % 2 == 0)
         {
             Lucky++;
         }
